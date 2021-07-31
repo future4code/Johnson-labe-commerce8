@@ -10,11 +10,9 @@ const Cabecalho = styled.div`
   justify-content: space-between;
 `;
 
-
-const FontTitle =styled.h1`
+const FontTitle = styled.h1`
   font-size: 2.2em;
-`
-
+`;
 
 function Header(props) {
   return (

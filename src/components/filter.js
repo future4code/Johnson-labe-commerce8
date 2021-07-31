@@ -9,6 +9,9 @@ const EstiloFiltro = styled.div`
   align-items: center;
   margin: 10px 20px 10px 20px;
   border: 1px solid black;
+  background-color: lightyellow;
+  
+  
 `;
 
 const EstiloInput = styled.input`
