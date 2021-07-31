@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <Header
-        name={"Devolta para o Futuro"}
+        tiltle={"Devolta para o Futuro"}
         links={["Comprar", "Sobre", "Contato"]}
       ></Header>
       <Conteudo>

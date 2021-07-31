@@ -7,7 +7,6 @@ const GridCard = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 15px;
-  
 `;
 
 class Home extends React.Component {
@@ -21,7 +20,7 @@ class Home extends React.Component {
         <CardViagem />
         <CardViagem />
         <CardViagem />
-        <CardViagem />        
+        <CardViagem />
       </GridCard>
     );
   }
