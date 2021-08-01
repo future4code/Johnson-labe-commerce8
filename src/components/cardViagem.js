@@ -22,15 +22,10 @@ const BorderImg = styled.img`
   max-width: auto;
 `;
 
-
-
 const adicionarItem = (props) => {
   //adicionar alteração do estado
   console.log("clicou");
 };
-
-
-
 
 const CardViagem = (props) => {
   return (
