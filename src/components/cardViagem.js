@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const Card = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-padding-bottom: 20px;
-`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+`;
 
 const CardShadow = styled.div`
   box-shadow: 2px 2px 15px white;
@@ -21,6 +21,11 @@ const BorderImg = styled.img`
   height: 280px;
 `;
 
+const adicionarItem = (props) => {
+  //adicionar alteração do estado
+  console.log("clicou");
+};
+
 const CardViagem = (props) => {
   return (
     <div>
@@ -32,10 +37,10 @@ const CardViagem = (props) => {
         <div>
           <p>{props.texto}</p>
           <p>{props.preco}</p>
-          <button>Adicionar ao carrinho</button>
+          <button onClick={adicionarItem}>Adicionar ao carrinho</button>
         </div>
       </Card>
-    </div>  
+    </div>
   );
 };
 
