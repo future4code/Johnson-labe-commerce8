@@ -4,27 +4,31 @@ import Home from "./components/home";
 import Filter from "./components/filter";
 import Carrinho from "./components/carrinho";
 import Header from "./components/header";
+import Footer from "./components/footer";
 
 const Conteudo = styled.div`
-  display: flex;
-  padding: 10px;
+  display: grid;
+  
+  padding: 10px;  
   align-items: center;
   justify-content: space-between;
-`;
+  background-color: lightgray;
 
+ `
 
 function App() {
   return (
     <div className="App">
       <Header
-        name={"Devolta para o Futuro"}
+        tiltle={"De volta para o Futuro"}
         links={["Comprar", "Sobre", "Contato"]}
       ></Header>
       <Conteudo>
-      <Filter />
-      <Home />
-      <Carrinho />
+        <Filter />
+        <Carrinho />
+        <Home />
       </Conteudo>
+      <Footer/>
     </div>
   );
 }

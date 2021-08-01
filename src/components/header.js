@@ -1,35 +1,25 @@
 import React from "react";
 import styled from "styled-components";
+import Menu from "./listaMenu";
 
 const Cabecalho = styled.div`
-  background-color: darkgray;
+  background-color: #00acea;
   display: flex;
   padding: 10px;
   align-items: center;
   justify-content: space-between;
 `;
 
-const ListaMenu = styled.div`
- display: flex;
- list-style: none;
-
-`
-const SpaceLi = styled.li`
-    margin: 5px;
-`
+const FontTitle = styled.h1`
+  font-size: 2.2em;
+`;
 
 function Header(props) {
   return (
-    
-      <Cabecalho className="header">
-        <h1>{props.name}</h1>
-        <ListaMenu className="menu">
-          <SpaceLi>{props.links[0]}</SpaceLi>
-          <SpaceLi>{props.links[1]}</SpaceLi>
-          <SpaceLi>{props.links[2]}</SpaceLi>
-        </ListaMenu>
-      </Cabecalho>
-    
+    <Cabecalho className="header">
+      <FontTitle>{props.tiltle}</FontTitle>
+      <Menu links={props.links}></Menu>
+    </Cabecalho>
   );
 }
 
