@@ -17,7 +17,7 @@ const FontTitle = styled.h1`
 function Header(props) {
   return (
     <Cabecalho className="header">
-      <FontTitle>{props.tiltle}</FontTitle>
+      <FontTitle>{props.title}</FontTitle>
       <Menu links={props.links}></Menu>
     </Cabecalho>
   );
