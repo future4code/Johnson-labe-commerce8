@@ -11,25 +11,28 @@ const Conteudo = styled.div`
   grid-template-columns: 1fr 4fr 1fr;
   background-color: black;
   color: white;
- `
+`;
+
+
+
 
 function App() {
+
+
   return (
     <div className="App">
-
       <Header
         title={"De volta para o Futuro"}
         links={["Comprar", "Sobre", "Contato"]}
       />
-      
+
       <Conteudo>
         <Filter />
         <Home />
         <Carrinho />
       </Conteudo>
 
-      <Footer/>
-
+      <Footer />
     </div>
   );
 }

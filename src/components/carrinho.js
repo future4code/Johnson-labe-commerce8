@@ -11,6 +11,10 @@ const EstiloCarrinho = styled.div`
   color: black;
 `;
 
+
+
+
+
 class Carrinho extends React.Component {
   render() {
     return (
