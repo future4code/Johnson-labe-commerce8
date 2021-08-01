@@ -9,23 +9,23 @@ const EstiloFiltro = styled.div`
   border: 1px solid black;
   background-color: lightyellow;
   color: black;
-`
+`;
 
 const EstiloInput = styled.input`
   padding: 3px;
   width: 120px;
   margin-top: 8px;
-`
+`;
 
 const EstiloDoP = styled.p`
   display: inline;
   margin-right: 10px;
-`
+`;
 
 const EstiloLabel = styled.label`
   align-self: flex-end;
   margin-right: 20px;
-`
+`;
 
 class Filter extends React.Component {
   render() {

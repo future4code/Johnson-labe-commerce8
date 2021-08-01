@@ -2,14 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 const StiloFooter = styled.div`
-  background-color: #00acea;  
+  background-color: #00acea;
   display: flex;
   padding: 10px;
   align-items: center;
   justify-content: center;
 `;
-
-
 
 function Footer(props) {
   return (
