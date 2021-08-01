@@ -15,7 +15,7 @@ function Footer(props) {
   return (
     <div className="footer">
       <StiloFooter className="social-midias">
-        <h2>Olá obrigado por escolher a Devolta para o futuro !!! </h2>
+        <h2>Olá obrigado por escolher a De volta para o futuro !!! </h2>
       </StiloFooter>
     </div>
   );

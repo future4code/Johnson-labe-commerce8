@@ -8,27 +8,28 @@ import Footer from "./components/footer";
 
 const Conteudo = styled.div`
   display: grid;
-  
-  padding: 10px;  
-  align-items: center;
-  justify-content: space-between;
-  background-color: lightgray;
-
+  grid-template-columns: 1fr 4fr 1fr;
+  background-color: black;
+  color: white;
  `
 
 function App() {
   return (
     <div className="App">
+
       <Header
-        tiltle={"Devolta para o Futuro"}
+        title={"De volta para o Futuro"}
         links={["Comprar", "Sobre", "Contato"]}
-      ></Header>
+      />
+      
       <Conteudo>
         <Filter />
-        <Carrinho />
         <Home />
+        <Carrinho />
       </Conteudo>
+
       <Footer/>
+
     </div>
   );
 }

@@ -2,7 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 const EstiloCarrinho = styled.div`
-  background-color: lightpink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 99%;
+  border: 1px solid black;
+  background-color: lightyellow;
+  color: black;
 `;
 
 class Carrinho extends React.Component {

@@ -4,13 +4,14 @@ import styled from "styled-components";
 const ListaMenu = styled.div`
   display: flex;
   list-style: none;
-`;
+`
+
 const SpaceLi = styled.li`
-color: black;
-font-size: 1.2em;
-text-transform: uppercase;
+  color: black;
+  font-size: 1.2em;
+  text-transform: uppercase;
   margin: 5px;
-`;
+`
 
 function Menu(props) {
   return (
