@@ -11,15 +11,45 @@ const EstiloCarrinho = styled.div`
   color: black;
 `;
 
-class Carrinho extends React.Component {
+const Itens = styled.div`
+  display: flex;
+  height: 24px;
+`
+
+const itensCarrinho = [
+
+]
+
+const removerItem = (props) => {
+
+};
+
+// const listaCarrinho = itensCarrinho.map((item) => {
+//   return <li>{item}</li>
+// }
+
+export default class Carrinho extends React.Component {
+  state = {
+    produto: [
+      { quantidade: '', produtoNome: '' },
+      { quantidade: '', produtoNome: '' },
+      { quantidade: '', produtoNome: '' },
+      { quantidade: '', produtoNome: '' }
+    ],
+  };
+
   render() {
     return (
+      <>
       <EstiloCarrinho>
         <h3>Carrinho</h3>
         <p>Valor total:</p>
+      <Itens>
+        <ul>{itensCarrinho}</ul>
+        <button onClick={removerItem}>X</button>
+      </Itens>
       </EstiloCarrinho>
+      </>
     );
   }
 }
-
-export default Carrinho;
