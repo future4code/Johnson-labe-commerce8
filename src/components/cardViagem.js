@@ -27,6 +27,7 @@ const adicionarItem = (props) => {
 };
 
 const CardViagem = (props) => {
+  console.log(props)
   return (
     <div>
       <Card>
