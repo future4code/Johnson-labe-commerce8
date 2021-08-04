@@ -1,14 +1,15 @@
 import React from "react";
 import Filtros from "./components/filtro";
 import Produtos from "./components/produtos";
+import styled from "styled-components";
+import Jupiter from ""
 
-// const Conteudo = styled.div`
-//   display: grid;
-//   grid-template-columns: 1fr 4fr 1fr;
-//   background-color: black;
-//   color: white;
-
-// `;
+const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+`;
 
 const produtos = [
   {
@@ -18,43 +19,43 @@ const produtos = [
     foto: "Jupiter",
   },
   {
-    id: 1,
+    id: 2,
     nome: "xxxx",
     preco: 18000,
     foto: "sdfsd",
   },
   {
-    id: 1,
+    id: 3,
     nome: "xxxx",
     preco: 18000,
     foto: "sdfsd",
   },
   {
-    id: 1,
+    id: 4,
     nome: "xxxx",
     preco: 18000,
     foto: "sdfsd",
   },
   {
-    id: 1,
+    id: 5,
     nome: "xxxx",
     preco: 18000,
     foto: "sdfsd",
   },
   {
-    id: 1,
+    id: 6,
     nome: "xxxx",
     preco: 18000,
     foto: "sdfsd",
   },
   {
-    id: 1,
+    id: 7,
     nome: "xxxx",
     preco: 18000,
     foto: "sdfsd",
   },
   {
-    id: 1,
+    id: 8,
     nome: "xxxx",
     preco: 18000,
     foto: "sdfsd",
@@ -92,6 +93,7 @@ export default class App extends React.Component {
   render() {
     return (
       <>
+      <Card>
         <Filtros
           minimo={this.state.minimo}
           maximo={this.state.maximo}
@@ -112,6 +114,7 @@ export default class App extends React.Component {
           apagarProduto={this.apagarProduto}
           multiplicaValor={this.multiplicaValor}
         />
+      </Card>  
       </>
     );
   }

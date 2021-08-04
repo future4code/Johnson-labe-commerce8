@@ -1,5 +1,5 @@
 import React from "react";
-import ListaProdutos from "./listaprodutos";
+import ListaProdutos from "./listaProduto";
 
 class Produtos extends React.Component {
   state = {
