@@ -6,6 +6,7 @@ const Cabecalho = styled.div`
   background-color: #00acea;
   display: flex;
   padding: 10px;
+  border-radius:10px;
   align-items: center;
   justify-content: space-between;
 `;
@@ -21,7 +22,7 @@ const FontTitle = styled.h1`
 function Header(props) {
   return (
     <Cabecalho className="header">
-      <FontTitle>{props.title}</FontTitle>
+      <FontTitle>{this.props.texto}</FontTitle>
       <Menu links={props.links}></Menu>
     </Cabecalho>
   );
