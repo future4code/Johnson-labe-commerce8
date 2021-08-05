@@ -14,7 +14,7 @@ const EstiloContainer = styled.div`
 const EstiloFiltro = styled.div`
   margin: 30px;
   align-items: center;
-`
+`;
 
 class Filtros extends React.Component {
   render() {
@@ -28,18 +28,18 @@ class Filtros extends React.Component {
               <input
                 type="range"
                 min="0"
-                max="649001"
+                max="50000"
                 value={this.props.minimo}
                 onChange={this.props.onChangeMinimo}
               ></input>
-              <label>Valor Máximo</label>
+              {/* <label>Valor Máximo</label>
               <input
                 type="range"
-                min="0"
-                max="649001"
+                min="649001"
+                max="0"
                 value={this.props.maximo}
                 onChange={this.props.onChangeMaximo}
-              ></input>
+              ></input> */}
               <label>Buscar Produto</label>
               <input
                 value={this.props.buscaProduto}

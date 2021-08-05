@@ -11,8 +11,8 @@ import Jupiter from "./assets/jupiter.jpg";
 import Saturno from "./assets/saturno.jpg";
 import Urano from "./assets/urano.jpg";
 import Netuno from "./assets/netuno.jpg";
-// import Header from "./components/header";
-// import Footer from "./components/footer/footer";
+import Header from "./components/header2/header";
+import Footer from "./components/footer/footer";
 
 const Conteudo = styled.div`
   display: grid;
@@ -38,7 +38,7 @@ const produtos = [
   {
     id: 3,
     nome: "Viagem para Vênus",
-    preco: 18000,
+    preco: 1800,
     foto: Venus,
   },
   {
@@ -50,25 +50,25 @@ const produtos = [
   {
     id: 5,
     nome: "Viagem para Júpiter",
-    preco: 18000,
+    preco: 19000,
     foto: Jupiter,
   },
   {
     id: 6,
     nome: "Viagem para Saturno",
-    preco: 18000,
+    preco: 12000,
     foto: Saturno,
   },
   {
     id: 7,
     nome: "Viagem para Urano",
-    preco: 18000,
+    preco: 100000,
     foto: Urano,
   },
   {
     id: 8,
     nome: "Viagem para Netuno",
-    preco: 18000,
+    preco: 182000,
     foto: Netuno,
   },
 ];
@@ -81,9 +81,22 @@ export default class App extends React.Component {
     produtosCarrinho: [],
   };
 
-  componentDidMount() {}
+  componentDidMount() {
+    const carrinhoSalvo = localStorage.getItem('carrinho')
+    const carrinhoAtualizado = JSON.parse(carrinhoSalvo) 
+    if(carrinhoAtualizado){
+      this.setState({produtosCarrinho: carrinhoAtualizado})
+    }
+     
+  }
 
-  componentDidUpdate() {}
+  componentDidUpdate() {
+    localStorage.setItem(
+      "carrinho",
+      JSON.stringify(this.state.produtosCarrinho)
+    );
+    console.log(this.state.produtosCarrinho);
+  }
 
   onChangeMinimo = (e) => {
     this.setState({ minimo: e.target.value });
@@ -124,6 +137,7 @@ export default class App extends React.Component {
   };
 
   apagarProduto = (idProduto) => {
+    
     const noCarrinho = this.state.produtosCarrinho.find(
       (produtos) => idProduto === produtos.id
     );
@@ -147,6 +161,11 @@ export default class App extends React.Component {
   render() {
     return (
       <>
+        <Header
+          nome="Título da Pagina"
+          links={["Sobre", "Comprar", "Contato"]}
+        />
+        <listaMenu />
         <Conteudo>
           <Filtros
             minimo={this.state.minimo}
@@ -169,6 +188,7 @@ export default class App extends React.Component {
             multiplicaValor={this.multiplicaValor}
           />
         </Conteudo>
+        <Footer texto="Olá eu sou o FOOTER" />
       </>
     );
   }

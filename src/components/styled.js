@@ -2,14 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  /* height: 100%; */
-  /* padding: 30px; */
   background-color: white;
-  /* background: #fff; */
-  /* border-radius: 4px; */
   footer {
     display: flex;
-    /* margin-top: 30px; */
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -22,7 +17,6 @@ export const Container = styled.div`
       padding: 12px 20px;
       font-weight: bold;
       text-transform: uppercase;
-      /* transition: background 0.2s; */
     }
   }
 `;
@@ -30,6 +24,7 @@ export const Container = styled.div`
 export const ProductTable = styled.table`
   display: flex;
   flex-direction: column;
+  background-color: lightblue;
   width: 100%;
   thead th {
     color: black;
@@ -68,9 +63,11 @@ export const ProductTable = styled.table`
     }
   }
   button {
-    background: none;
-    border: 0;
-    padding: 6px;
+    height: 20px;
+    width: 50px;
+    background-color: red;
+    border-radius: 5px;
+    color: #ddd;
   }
 `;
 
