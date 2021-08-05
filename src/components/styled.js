@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  max-width: 100%;
+  max-height: 100%;
   padding: 30px;
-  background: #fff;
-  border-radius: 4px;
+  background-color: green;
+  /* background: #fff; */
+  /* border-radius: 4px; */
   footer {
     margin-top: 30px;
     display: flex;

@@ -4,8 +4,8 @@ import styled from "styled-components";
 
 const GridCard = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 2fr);
-  grid-template-rows: repeat(2, 2fr);
+  /* grid-template-columns: repeat(4, 1fr); */
+  /* grid-template-rows: repeat(2, 2fr); */
   width: 100%;
   align-items: center;
   justify-items: center;

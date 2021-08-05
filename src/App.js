@@ -15,6 +15,7 @@ import Netuno from "./assets/netuno.jpg";
 const Conteudo = styled.div`
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   background-color: pink;
   color: white;
 `;
