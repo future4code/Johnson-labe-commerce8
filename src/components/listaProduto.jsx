@@ -2,21 +2,18 @@ import React from "react";
 import styled from "styled-components";
 
 const Item = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  list-style: none;
-
   li {
     display: flex;
     flex-direction: column;
     background: #fff;
-    border-radius: 4px;
+    border-radius: 10px;
     padding: 20px;
 
     img {
       align-self: center;
-      max-width: 250px;
+      width: 250px;
+      height: 250px;
+      border-radius: 10px;
     }
 
     > strong {

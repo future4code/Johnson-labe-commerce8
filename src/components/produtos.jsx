@@ -1,5 +1,17 @@
 import React from "react";
 import ListaProdutos from "./listaProduto";
+import styled from "styled-components";
+
+const GridCard = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-template-rows: repeat(2, 2fr);
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+`;
 
 class Produtos extends React.Component {
   state = {
@@ -45,16 +57,18 @@ class Produtos extends React.Component {
           </label>
         </div>
         <div>
-          {ordenaListaFiltrada.map((produto) => {
-            return (
-              <ListaProdutos
-                produto={produto}
-                addProdutoAoCarrinho={() =>
-                  this.props.addProdutoAoCarrinho(produto.id)
-                }
-              />
-            );
-          })}
+          <GridCard>
+            {ordenaListaFiltrada.map((produto) => {
+              return (
+                <ListaProdutos
+                  produto={produto}
+                  addProdutoAoCarrinho={() =>
+                    this.props.addProdutoAoCarrinho(produto.id)
+                  }
+                />
+              );
+            })}
+          </GridCard>
         </div>
       </div>
     );

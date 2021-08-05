@@ -1,64 +1,72 @@
 import React from "react";
 import Filtros from "./components/filtro";
 import Produtos from "./components/produtos";
+import Carrinho from "./components/carrinho";
 import styled from "styled-components";
-import Jupiter from ""
+import Lua from "./assets/lua.jpg";
+import Mercurio from "./assets/mercurio.jpg";
+import Venus from "./assets/venus.jpg";
+import Marte from "./assets/marte.jpg";
+import Jupiter from "./assets/jupiter.jpg";
+import Saturno from "./assets/saturno.jpg";
+import Urano from "./assets/urano.jpg";
+import Netuno from "./assets/netuno.jpg";
 
-const Card = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 20px;
+const Conteudo = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  background-color: pink;
+  color: white;
 `;
 
 const produtos = [
   {
     id: 1,
-    nome: "xxxx",
+    nome: "Lua",
     preco: 18000,
-    foto: "Jupiter",
+    foto: Lua,
   },
   {
     id: 2,
-    nome: "xxxx",
+    nome: "Mercúrio",
     preco: 18000,
-    foto: "sdfsd",
+    foto: Mercurio,
   },
   {
     id: 3,
-    nome: "xxxx",
+    nome: "Vênus",
     preco: 18000,
-    foto: "sdfsd",
+    foto: Venus,
   },
   {
     id: 4,
-    nome: "xxxx",
+    nome: "Marte",
     preco: 18000,
-    foto: "sdfsd",
+    foto: Marte,
   },
   {
     id: 5,
-    nome: "xxxx",
+    nome: "Júpiter",
     preco: 18000,
-    foto: "sdfsd",
+    foto: Jupiter,
   },
   {
     id: 6,
-    nome: "xxxx",
+    nome: "Saturno",
     preco: 18000,
-    foto: "sdfsd",
+    foto: Saturno,
   },
   {
     id: 7,
-    nome: "xxxx",
+    nome: "Urano",
     preco: 18000,
-    foto: "sdfsd",
+    foto: Urano,
   },
   {
     id: 8,
-    nome: "xxxx",
+    nome: "Netuno",
     preco: 18000,
-    foto: "sdfsd",
+    foto: Netuno,
   },
 ];
 
@@ -86,35 +94,78 @@ export default class App extends React.Component {
     this.setState({ buscaProduto: e.target.value });
   };
 
-  apagarProduto = (idProduto) => {};
+  addProdutoCarrinho = (idProduto) => {
+    const noCarrinho = this.state.produtosCarrinho.find(
+      (produto) => idProduto === produto.id
+    );
 
-  adicionarProdutoCarrinho = (idProduto) => {};
+    if (noCarrinho) {
+      const novoCarrinho = this.state.produtosCarrinho.map((produto) => {
+        if (idProduto === produto.id) {
+          return {
+            ...produto,
+            qntCompra: produto.qntdCompra + 1,
+          };
+        }
+        return produto;
+      });
+      this.setState({ produtosCarrinho: novoCarrinho });
+    } else {
+      const novoProduto = produtos.find((produto) => idProduto === produto.id);
+      const novoCarrinho = [
+        ...this.state.produtosCarrinho,
+        { ...novoProduto, qntdCompra: 1 },
+      ];
+      this.setState({ produtosCarrinho: novoCarrinho });
+    }
+  };
+
+  apagarProduto = (idProduto) => {
+    const noCarrinho = this.state.produtosCarrinho.find(
+      (produtos) => idProduto === produtos.id
+    );
+
+    if (noCarrinho) {
+      const novoCarrinho = this.state.produtosCarrinho
+        .map((produto) => {
+          if (idProduto === produto.id) {
+            return {
+              ...produto,
+              qntdCompra: produto.qntCompra - 1,
+            };
+          }
+          return produto;
+        })
+        .filter((produto) => produto.qntdCompra > 0);
+      this.setState({ produtosCarrinho: novoCarrinho });
+    }
+  };
 
   render() {
     return (
       <>
-      <Card>
-        <Filtros
-          minimo={this.state.minimo}
-          maximo={this.state.maximo}
-          buscaProduto={this.state.buscaProduto}
-          onChangeMinimo={this.onChangeMinimo}
-          onChangeMaximo={this.onChangeMaximo}
-          onChangeBusca={this.onChangeBusca}
-        />
-        <Produtos
-          produtos={produtos}
-          minimo={this.state.minimo}
-          maximo={this.state.maximo}
-          buscaProduto={this.state.buscaProduto}
-          addProdutoAoCarrinho={this.addProdutoAoCarrinho}
-        />
-        <carCompras
-          carrinhoCompra={this.state.produtosCarrinho}
-          apagarProduto={this.apagarProduto}
-          multiplicaValor={this.multiplicaValor}
-        />
-      </Card>  
+        <Conteudo>
+          <Filtros
+            minimo={this.state.minimo}
+            maximo={this.state.maximo}
+            buscaProduto={this.state.buscaProduto}
+            onChangeMinimo={this.onChangeMinimo}
+            onChangeMaximo={this.onChangeMaximo}
+            onChangeBusca={this.onChangeBusca}
+          />
+          <Produtos
+            produtos={produtos}
+            minimo={this.state.minimo}
+            maximo={this.state.maximo}
+            buscaProduto={this.state.buscaProduto}
+            addProdutoAoCarrinho={this.addProdutoCarrinho}
+          />
+          <Carrinho
+            carrinhoCompra={this.state.produtosCarrinho}
+            apagarProduto={this.apagarProduto}
+            multiplicaValor={this.multiplicaValor}
+          />
+        </Conteudo>
       </>
     );
   }

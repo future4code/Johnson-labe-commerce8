@@ -1,9 +1,10 @@
 import React from "react";
+import { Container, ProductTable, Total } from "./styled";
 
 class Carrinho extends React.Component {
   multiplicarValor = (qntd, valor) => {
     const carrinhoTotal = qntd * valor;
-    console.log(carrinhoTotal);
+
     return carrinhoTotal;
   };
 
@@ -19,8 +20,8 @@ class Carrinho extends React.Component {
   render() {
     const carrinho = this.props.carrinhoCompra.map((cart, index) => {
       return (
-        <div>
-          <div>
+        <Container>
+          <ProductTable>
             <thead>
               <tr>
                 <th>PRODUTO</th>
@@ -54,21 +55,23 @@ class Carrinho extends React.Component {
                 </td>
               </tr>
             </tbody>
-          </div>
-        </div>
+          </ProductTable>
+        </Container>
       );
     });
     return (
       <div>
-        {carrinho}
-        <footer>
-          <button type="button">Finalizar pedido</button>
+        <Container>
+          {carrinho}
+          <footer>
+            <button type="button">Finalizar pedido</button>
 
-          <div>
-            <span>TOTAL</span>
-            <strong>R${this.valorTotal()},00</strong>
-          </div>
-        </footer>
+            <Total>
+              <span>TOTAL: </span>
+              <strong>R${this.valorTotal()},00</strong>
+            </Total>
+          </footer>
+        </Container>
       </div>
     );
   }
