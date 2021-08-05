@@ -11,61 +11,63 @@ import Jupiter from "./assets/jupiter.jpg";
 import Saturno from "./assets/saturno.jpg";
 import Urano from "./assets/urano.jpg";
 import Netuno from "./assets/netuno.jpg";
+// import Header from "./components/header";
+// import Footer from "./components/footer/footer";
 
 const Conteudo = styled.div`
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  background-color: pink;
+  height: 100vh;
+  background-color: black;
   color: white;
 `;
 
 const produtos = [
   {
     id: 1,
-    nome: "Lua",
-    preco: 18000,
+    nome: "Viagem para a Lua",
+    preco: 20000,
     foto: Lua,
   },
   {
     id: 2,
-    nome: "Mercúrio",
+    nome: "Viagem para Mercúrio",
     preco: 18000,
     foto: Mercurio,
   },
   {
     id: 3,
-    nome: "Vênus",
+    nome: "Viagem para Vênus",
     preco: 18000,
     foto: Venus,
   },
   {
     id: 4,
-    nome: "Marte",
-    preco: 18000,
+    nome: "Viagem para Marte",
+    preco: 50000,
     foto: Marte,
   },
   {
     id: 5,
-    nome: "Júpiter",
+    nome: "Viagem para Júpiter",
     preco: 18000,
     foto: Jupiter,
   },
   {
     id: 6,
-    nome: "Saturno",
+    nome: "Viagem para Saturno",
     preco: 18000,
     foto: Saturno,
   },
   {
     id: 7,
-    nome: "Urano",
+    nome: "Viagem para Urano",
     preco: 18000,
     foto: Urano,
   },
   {
     id: 8,
-    nome: "Netuno",
+    nome: "Viagem para Netuno",
     preco: 18000,
     foto: Netuno,
   },
@@ -105,7 +107,7 @@ export default class App extends React.Component {
         if (idProduto === produto.id) {
           return {
             ...produto,
-            qntCompra: produto.qntdCompra + 1,
+            qntdCompra: produto.qntdCompra + 1,
           };
         }
         return produto;
@@ -132,7 +134,7 @@ export default class App extends React.Component {
           if (idProduto === produto.id) {
             return {
               ...produto,
-              qntdCompra: produto.qntCompra - 1,
+              qntdCompra: produto.qntdCompra - 1,
             };
           }
           return produto;

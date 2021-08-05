@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const Item = styled.ul`
+  padding: 0;
+
   li {
     display: flex;
     flex-direction: column;
@@ -10,9 +12,9 @@ const Item = styled.ul`
     padding: 20px;
 
     img {
-      align-self: center;
-      width: 250px;
-      height: 250px;
+      align-items: center;
+      width: 200px;
+      height: 200px;
       border-radius: 10px;
     }
 
@@ -20,11 +22,11 @@ const Item = styled.ul`
       font-size: 16px;
       line-height: 20px;
       color: #333;
-      margin-top: 5px;
+      margin-top: 10px;
     }
 
     > span {
-      font-size: 21px;
+      font-size: 20px;
       font-weight: bold;
       margin: 5px 0 20px;
       color: #333;
@@ -37,10 +39,9 @@ const Item = styled.ul`
       border-radius: 4px;
       overflow: hidden;
       margin-top: auto;
-
       display: flex;
       align-items: center;
-      transition: background 0.2s;
+      height: 50px;
 
       &:hover {
         background: black;
@@ -76,9 +77,6 @@ class ListaProdutos extends React.Component {
           <strong>{produto.nome}</strong>
           <span>R${produto.preco},00</span>
           <button type="button" onClick={this.props.addProdutoAoCarrinho}>
-            <div>
-              <div size={16} color="#FFF" />
-            </div>
             <span>COMPRAR</span>
           </button>
         </li>

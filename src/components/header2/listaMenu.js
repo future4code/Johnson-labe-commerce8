@@ -13,14 +13,14 @@ const SpaceLi = styled.li`
   margin: 5px;
 `
 
-function Menu(props) {
-  return (
-    <ListaMenu className="menu">
-      {props.links.map((link) => {
-        return <SpaceLi>{link}</SpaceLi>;
-      })}
-    </ListaMenu>
-  );
-}
+// function Menu(props) {
+//   return (
+//     // <ListaMenu className="menu">
+//     //   {props.links.map((link) => {
+//     //     return <SpaceLi>{link}</SpaceLi>;
+//     //   })}
+//     // </ListaMenu>
+//   );
+// }
 
 export default Menu;
