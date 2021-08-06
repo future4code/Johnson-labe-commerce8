@@ -11,13 +11,13 @@ import Jupiter from "./assets/jupiter.jpg";
 import Saturno from "./assets/saturno.jpg";
 import Urano from "./assets/urano.jpg";
 import Netuno from "./assets/netuno.jpg";
-import Header from "./components/header2/header";
+import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 
 const Conteudo = styled.div`
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
-  height: 100vh;
+  grid-template-columns: 1fr 4fr 1.2fr;
+  /* height: 100vh; */
   background-color: black;
   color: white;
 `;
@@ -25,49 +25,49 @@ const Conteudo = styled.div`
 const produtos = [
   {
     id: 1,
-    nome: "Viagem para a Lua",
+    nome: "Lua",
     preco: 20000,
     foto: Lua,
   },
   {
     id: 2,
-    nome: "Viagem para Mercúrio",
+    nome: "Mercúrio",
     preco: 18000,
     foto: Mercurio,
   },
   {
     id: 3,
-    nome: "Viagem para Vênus",
+    nome: "Vênus",
     preco: 1800,
     foto: Venus,
   },
   {
     id: 4,
-    nome: "Viagem para Marte",
+    nome: "Marte",
     preco: 50000,
     foto: Marte,
   },
   {
     id: 5,
-    nome: "Viagem para Júpiter",
+    nome: "Júpiter",
     preco: 19000,
     foto: Jupiter,
   },
   {
     id: 6,
-    nome: "Viagem para Saturno",
+    nome: "Saturno",
     preco: 12000,
     foto: Saturno,
   },
   {
     id: 7,
-    nome: "Viagem para Urano",
+    nome: "Urano",
     preco: 100000,
     foto: Urano,
   },
   {
     id: 8,
-    nome: "Viagem para Netuno",
+    nome: "Netuno",
     preco: 182000,
     foto: Netuno,
   },
@@ -162,9 +162,9 @@ export default class App extends React.Component {
     return (
       <>
         <Header
-          nome="Título da Pagina"
-          links={["Sobre", "Comprar", "Contato"]}
-        />
+          nome={"Título da Página"}
+          links={["Comprar", "Contato", "Sobre"]}
+          />
         <listaMenu />
         <Conteudo>
           <Filtros

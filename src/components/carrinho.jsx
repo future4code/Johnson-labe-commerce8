@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, ProductTable, Total } from "./styled";
+import { EstiloCarrinho, Container, ProductTable, Total } from "./styled";
 
 class Carrinho extends React.Component {
   multiplicarValor = (qntd, valor) => {
@@ -49,7 +49,7 @@ class Carrinho extends React.Component {
                   <button
                     type="button"
                     onClick={() => this.props.apagarProduto(cart.id)}
-                  ></button>
+                  >X</button>
                 </td>
               </tr>
             </tbody>
