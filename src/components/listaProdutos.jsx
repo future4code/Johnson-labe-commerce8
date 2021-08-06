@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 const Item = styled.ul`
   padding: 0;
+  border: 2px solid black;
+  border-radius: 10px;
 
   li {
     display: flex;
@@ -33,7 +35,7 @@ const Item = styled.ul`
     }
 
     button {
-      background: #191920;
+      background: green;
       color: #fff;
       border: 0;
       border-radius: 4px;
@@ -44,7 +46,7 @@ const Item = styled.ul`
       height: 50px;
 
       &:hover {
-        background: black;
+        background: #009b00;
       }
 
       div {

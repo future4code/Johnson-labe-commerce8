@@ -5,16 +5,18 @@ import styled from "styled-components";
 const GridCard = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* grid-template-rows: repeat(1, 1fr); */
   width: 100%;
-  /* align-items: center; */
   justify-items: center;
+  background-color: white;
 `;
 
 const Ordem = styled.div`
   display: flex;
-  justify-content: space-between;
-  margin: 30px;
+  color: black;
+  background-color: white;
+  justify-content: space-evenly;
+  align-items: center;
+  /* margin: 30px; */
 `
 
 class Produtos extends React.Component {

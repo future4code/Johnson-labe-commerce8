@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
-export const EstiloCarrinho = styled.div`
-  height: 100vh;
-  background-color: white;
-`;
-
 export const Container = styled.div`
   width: 100%;
-  /* height: 100%; */
   background-color: white;
+  h2 {
+    color: black;
+    margin:30px;
+  }
   footer {
     display: flex;
     flex-direction: column;
@@ -31,7 +29,6 @@ export const ProductTable = styled.table`
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* height: 100%; */
   align-items: flex-start;
   thead th {
     color: black;

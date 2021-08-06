@@ -7,7 +7,7 @@ const ListaMenu = styled.div`
 `
 
 const SpaceLi = styled.li`
-  color: black;
+  color: white;
   font-size: 1.2em;
   text-transform: uppercase;
   margin: 5px;
