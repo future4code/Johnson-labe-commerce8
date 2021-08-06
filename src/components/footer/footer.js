@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const StiloFooter = styled.div`
-  background-color: #00acea;
+  background-color: black;
+  color: white;
   display: flex;
   padding: 10px;
   align-items: center;

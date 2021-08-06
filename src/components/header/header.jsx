@@ -3,9 +3,9 @@ import styled from "styled-components";
 import Menu from "./listaMenu";
 
 const Cabecalho = styled.div`
-  background-color: #00acea;
+  background-color: black;
+  color: white;
   display: flex;
-  /* width: 100%; */
   padding: 10px;
   align-items: center;
   justify-content: space-between;
