@@ -11,12 +11,11 @@ const SpaceLi = styled.li`
   font-size: 1.2em;
   text-transform: uppercase;
   margin: 5px;
-  
 `
 
 function Menu(props) {
   return (
-    <ListaMenu>
+    <ListaMenu className="menu">
       {props.links.map((link) => {
         return <SpaceLi>{link}</SpaceLi>;
       })}

@@ -28,7 +28,7 @@ class Filtros extends React.Component {
               <input
                 type="range"
                 min="0"
-                max="50000"
+                max="200000"
                 value={this.props.minimo}
                 onChange={this.props.onChangeMinimo}
               ></input>

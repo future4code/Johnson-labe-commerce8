@@ -5,9 +5,9 @@ import styled from "styled-components";
 const GridCard = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 2fr);
+  /* grid-template-rows: repeat(1, 1fr); */
   width: 100%;
-  align-items: center;
+  /* align-items: center; */
   justify-items: center;
 `;
 
@@ -54,14 +54,14 @@ class Produtos extends React.Component {
         <div>
           <h1>Viagens espaciais com preços especiais!</h1>
         </div>
-          <label>
-            <span>Ordenar por: </span>
-            <select onChange={this.ordenarProdutos} value={this.state.ordenar}>
-              <option value={"crescente"}>Crescente</option>
-              <option value={"decrescente"}>Decrescente</option>
-            </select>
-            <p>Mostrando: {ordenaListaFiltrada.length} Produtos</p>
-          </label>
+        <label>
+          <span>Ordenar por: </span>
+          <select onChange={this.ordenarProdutos} value={this.state.ordenar}>
+            <option value={"crescente"}>Crescente</option>
+            <option value={"decrescente"}>Decrescente</option>
+          </select>
+          <p>Mostrando: {ordenaListaFiltrada.length} Produtos</p>
+        </label>
         </Ordem>
         <div>
           <GridCard>

@@ -1,7 +1,13 @@
 import styled from "styled-components";
 
+export const EstiloCarrinho = styled.div`
+  height: 100vh;
+  background-color: white;
+`;
+
 export const Container = styled.div`
   width: 100%;
+  /* height: 100%; */
   background-color: white;
   footer {
     display: flex;
@@ -24,29 +30,32 @@ export const Container = styled.div`
 export const ProductTable = styled.table`
   display: flex;
   flex-direction: column;
-  background-color: lightblue;
   width: 100%;
+  /* height: 100%; */
+  align-items: flex-start;
   thead th {
     color: black;
-    align-items: center;
+    align-items: flex-start;
     padding: 12px;
   }
   tbody td {
+    align-items: center;
+    text-align: center;
+    padding: 12px;
     border-bottom: 1px solid #eee;
   }
   img {
-    margin-left: 12px;
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     border-radius: 10px;
   }
   strong {
     color: #333;
-    /* display: block; */
+    display: block;
     font-size: 12px;
   }
   span {
-    /* display: block; */
+    display: block;
     margin-top: 5px;
     font-size: 18px;
     font-weight: bold;
@@ -63,9 +72,10 @@ export const ProductTable = styled.table`
     }
   }
   button {
+    font-weight: bold;
     height: 20px;
     width: 50px;
-    background-color: red;
+    background-color: black;
     border-radius: 5px;
     color: #ddd;
   }
