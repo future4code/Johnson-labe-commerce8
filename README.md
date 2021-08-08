@@ -1,1 +1,10 @@
-Sejam bem vindos ao Labe-commerce, esse repositório contém um esqueleto de app React e um .gitignore.
+Projeto LabECommerce - Mochileiro das Galáxias
+
+### O que funciona
+Todas as funcionalidades aplicadas foram testadas e estão funcionando.
+
+### O que não funciona
+A responsividade não foi implementada.
+
+### Link Surge 
+https://mochileirodasgalaxias.surge.sh/
