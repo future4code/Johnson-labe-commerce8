@@ -3,9 +3,11 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   background-color: white;
-  h2 {
+  img {
+    width: 60px;
     color: black;
-    margin:30px;
+    justify-content: center;
+    margin-top: 30px;
   }
   footer {
     display: flex;
@@ -13,7 +15,7 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     button {
-      margin-top: 30px;
+      margin: 10px 0 30px 0;
       background: #191920;
       color: #fff;
       border: 0;
@@ -72,9 +74,9 @@ export const ProductTable = styled.table`
     font-weight: bold;
     height: 20px;
     width: 50px;
-    background-color: black;
+    background-color: red;
     border-radius: 5px;
-    color: #ddd;
+    color: white;
   }
 `;
 
@@ -82,6 +84,7 @@ export const Total = styled.div`
   display: flex;
   align-items: baseline;
   span {
+    margin-top: 10px;
     color: black;
     font-weight: bold;
   }

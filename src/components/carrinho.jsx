@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, ProductTable, Total } from "./styled";
+import ImgCarrinho from "../assets/carrinho.png";
 
 class Carrinho extends React.Component {
   multiplicarValor = (qntd, valor) => {
@@ -60,15 +61,14 @@ class Carrinho extends React.Component {
     return (
       <Container>
         <div>
-          <h2>Carrinho:</h2>
+          <img src={ImgCarrinho}/>
           {carrinho}
           <footer>
-            <button type="button">Finalizar pedido</button>
-
             <Total>
               <span>TOTAL: </span>
               <strong>R${this.valorTotal()},00</strong>
             </Total>
+            <button type="button">Finalizar pedido</button>
           </footer>
         </div>
       </Container>
