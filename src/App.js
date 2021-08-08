@@ -16,59 +16,78 @@ import Footer from "./components/footer/footer";
 
 const Conteudo = styled.div`
   display: grid;
-  grid-template-columns: 1fr 4fr 1.2fr;
-  /* height: 100vh; */
+  grid-template-columns: 1.2fr 4fr 1.2fr;
+  grid-template-rows: 8vh 84vh 2vh;
+  max-height: 100vh;
+  overflow: auto;
+`;
+
+const EstiloHeader = styled.div`
   background-color: black;
   color: white;
-`;
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+`
+
+const EstiloFooter = styled.div`
+  background-color: black;
+  color: white;
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+`
 
 const produtos = [
   {
     id: 1,
     nome: "Lua",
-    preco: 20000,
+    preco: 80000,
     foto: Lua,
   },
   {
     id: 2,
     nome: "Mercúrio",
-    preco: 18000,
+    preco: 100000,
     foto: Mercurio,
   },
   {
     id: 3,
     nome: "Vênus",
-    preco: 1800,
+    preco: 120000,
     foto: Venus,
   },
   {
     id: 4,
     nome: "Marte",
-    preco: 50000,
+    preco: 120000,
     foto: Marte,
   },
   {
     id: 5,
     nome: "Júpiter",
-    preco: 19000,
+    preco: 150000,
     foto: Jupiter,
   },
   {
     id: 6,
     nome: "Saturno",
-    preco: 12000,
+    preco: 180000,
     foto: Saturno,
   },
   {
     id: 7,
     nome: "Urano",
-    preco: 100000,
+    preco: 190000,
     foto: Urano,
   },
   {
     id: 8,
     nome: "Netuno",
-    preco: 182000,
+    preco: 200000,
     foto: Netuno,
   },
 ];
@@ -161,11 +180,13 @@ export default class App extends React.Component {
   render() {
     return (
       <>
-        <Header
-          nome={"Título da Página"}
-          links={["Comprar", "Contato", "Sobre"]}
+        <EstiloHeader>
+          <Header
+            nome={"Mochileiro das Galáxias"}
+            // links={["Comprar", "Contato", "Sobre"]}
           />
         <listaMenu />
+        </EstiloHeader>
         <Conteudo>
           <Filtros
             minimo={this.state.minimo}
@@ -188,7 +209,9 @@ export default class App extends React.Component {
             multiplicaValor={this.multiplicaValor}
           />
         </Conteudo>
-        <Footer texto="Olá eu sou o FOOTER" />
+        <EstiloFooter>
+        <Footer texto="Olá! Eu sou o FOOTER!" />
+        </EstiloFooter>
       </>
     );
   }

@@ -9,46 +9,40 @@ const EstiloContainer = styled.div`
   height: 100%;
   background-color: white;
   color: black;
-`;
+  `;
 
 const EstiloFiltro = styled.div`
   margin: 30px;
-  align-items: center;
 `;
 
 class Filtros extends React.Component {
   render() {
     return (
-      <div>
-        <EstiloContainer>
-          <div>
-            <EstiloFiltro>
-              <h2>Filtros</h2>
-              <label>Valor Mínimo</label>
-              <input
-                type="range"
-                min="0"
-                max="200000"
-                value={this.props.minimo}
-                onChange={this.props.onChangeMinimo}
-              ></input>
-              {/* <label>Valor Máximo</label>
-              <input
-                type="range"
-                min="649001"
-                max="0"
-                value={this.props.maximo}
-                onChange={this.props.onChangeMaximo}
-              ></input> */}
-              <label>Buscar Produto</label>
+      <EstiloContainer>
+        <div>
+          <EstiloFiltro>
+            <div>
+              <h2>Filtros:</h2>
+              <label>R$ 0,00
+                <input
+                  type="range"
+                  min="0"
+                  max="199000"
+                  value={this.props.minimo}
+                  onChange={this.props.onChangeMinimo}
+                ></input>
+              R$ 200.000,00</label>
+            </div>
+            <div>
+              <label>Buscar Produto: </label>
               <input
                 value={this.props.buscaProduto}
                 onChange={this.props.onChangeBusca}
               ></input>
-            </EstiloFiltro>
-          </div>
-        </EstiloContainer>
-      </div>
+            </div>
+          </EstiloFiltro>
+        </div>
+      </EstiloContainer>
     );
   }
 }
